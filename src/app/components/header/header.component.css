@@ -1,0 +1,16 @@
+.nav-bar #nav-bar__links {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.nav-bar__link a {
+  text-decoration: none;
+  color: aliceblue;
+  transition: color 250ms;
+}
+
+.nav-bar__link a:hover {
+  color: antiquewhite;
+}

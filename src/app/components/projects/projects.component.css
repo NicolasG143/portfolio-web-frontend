@@ -1,0 +1,42 @@
+.projects {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 5rem;
+}
+
+.projects-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.project a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  border: 1px solid #fff;
+  border-radius: 50px;
+  height: fit-content;
+  transition: scale 250ms ease-in;
+  color: white;
+  text-decoration: none;
+  flex-wrap: wrap;
+}
+
+.project a:hover {
+  scale: 1.02;
+}
+
+.project a > * {
+  width: 100%;
+  text-align: center;
+}
+
+.project .snippet {
+  max-width: 66%;
+}

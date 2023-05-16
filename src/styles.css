@@ -1,1 +1,48 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1.8rem;
+  color: aliceblue;
+  font-family: "Poppins", sans-serif;
+  background-color: #333;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-inline: 2rem;
+}
+
+app-about > :nth-child(odd) {
+  background-color: #444;
+}
+
+h1 {
+  font-family: "Poppins", system-ui, sans-serif;
+}
+
+app-header {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section {
+  min-height: 500px;
+}
+
+.logo #logo-text {
+  font-size: 4.5rem;
+}

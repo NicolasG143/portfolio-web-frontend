@@ -1,0 +1,34 @@
+:root {
+  --fill-collor: #333;
+}
+
+.footer {
+  display: grid;
+  place-items: center;
+  grid-template-rows: repeat(2, 1fr) 50px;
+}
+
+.logo {
+  grid-row: 1 / 2;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.redes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #444;
+  grid-row: 2 / 3;
+  width: 100%;
+  height: 100%;
+  gap: 2.5rem;
+}
+
+.redes a {
+  font-size: 2.5rem;
+  color: white;
+}

@@ -1,0 +1,22 @@
+<form class="contact-form"[formGroup]="contactForm" (ngSubmit)="enviarMensaje()">
+    <div class="contact-form__nombre">
+        <label class="form-label">Nombre: </label>
+        <input type="text" [formControl]="name" placeholder="Ingrese su nombre..." class="form-control">
+        <div class="invalid" [ngClass]="name.valid ? 'hide' : ''">El nombre es obligatorio.</div>
+    </div>
+    <div class="contact-form__email">
+        <label class="form-label">Email: </label>
+        <input type="email" [formControl]="email" placeholder="Ingrese su e-mail..." class="form-control">
+        <div class="invalid" [ngClass]="email.valid ? 'hide' : ''">
+            <span *ngIf="email.invalid || email.pristine">Email incorrecto.</span>
+        </div>
+    </div>
+    <div class="contact-form__message">
+        <label class="form-label msg">Mensaje: <span class="length">{{message.value.length}}/{{maxLength}}</span></label>
+        <textarea [formControl]="message" resize="false" class="form-control" placeholder="¿Qué necesitas?" [maxLength]="maxLength"></textarea>
+        <div class="invalid" [ngClass]="message.valid ? 'hide' : ''">
+            <span *ngIf="message.invalid || message.pristine">El mensaje debe ser de mínimo 20 caracteres.</span>
+        </div>
+    </div>
+    <button type="submit" [disabled]="contactForm.invalid">Enviar</button>
+</form>
