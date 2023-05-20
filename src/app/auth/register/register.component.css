@@ -1,0 +1,64 @@
+.isLogged {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.isLogged p {
+  font-size: 4rem;
+  text-shadow: 2px 2px 2px #000;
+}
+
+.isLogged a {
+  color: white;
+  font-size: 2.5rem;
+}
+
+.registerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.registerContainer .register-form {
+  display: grid;
+  gap: 2rem;
+  width: 100%;
+  max-width: 400px;
+  max-height: 100vh;
+}
+
+.register-form div {
+  display: flex;
+  flex-direction: column;
+}
+
+.register-form div label {
+  padding-left: 0.5rem;
+}
+
+.register-form div input {
+  width: 100%;
+  height: 32px;
+  border-radius: 10px;
+  padding: 2rem;
+  outline: none;
+  border: none;
+}
+
+.register-form button {
+  height: 48px;
+  border-radius: 50px;
+  width: 50%;
+  justify-self: center;
+  outline: none;
+  border: none;
+  font-size: 1.6rem;
+}
+
+.register-form button:enabled {
+  cursor: pointer;
+}

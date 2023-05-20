@@ -1,1 +1,32 @@
-[([(ngModel)]="nombre")]
+
+<div class="isLogged" *ngIf="isLogged; else loggedOut">
+    <p>Ya iniciaste sesión como: {{getUserName()}}</p>
+    <a routerLink="">Ir a inicio</a>
+</div>
+
+<ng-template #loggedOut>
+    <div class="registerContainer">
+        <form [formGroup]="registerForm" (ngSubmit)="onRegister()" class="register-form">
+            <div>
+                <label>Nombre:</label>
+                <input type="text" [formControl]="name" placeholder="Nombre" class="form-control" [(ngModel)]="nombre">
+            </div>
+            <div>
+                <label>Nombre de Usuario:</label>
+                <input type="text" [formControl]="nickName" placeholder="Nombre de Usuario..." class="form-control" [(ngModel)]="nombreUsuario">
+            </div>
+            <div>
+                <label>Email:</label>
+                <input type="email" [formControl]="eMail" placeholder="example@gmail.com" class="form-control" [(ngModel)]="email">
+            </div>
+            <div>
+                <label>Contraseña:</label>
+                <input type="password" [formControl]="passWord" placeholder="Contraseña..." class="form-control" [(ngModel)]="password">
+            </div>
+            <button [disabled]="registerForm.invalid">Registrarse</button>
+            <div class="go-login">
+                <a routerLink="/login">¿Ya tenes cuenta? Inicia sesión.</a>
+            </div>
+        </form>
+    </div>
+</ng-template>

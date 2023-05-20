@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { NuevoUsuario } from 'src/app/classes/nuevo-usuario';
 import { AuthService } from 'src/app/services/auth.service';
@@ -23,12 +24,41 @@ export class RegisterComponent implements OnInit {
 
 constructor (private tokenService: TokenService,
   private authService: AuthService,
-  private router: Router){}
+  private router: Router,
+  private fb: FormBuilder){}
 
   ngOnInit(): void {
       if (this.tokenService.getToken()){
         this.isLogged = true;
       }
+  }
+
+  registerForm = this.fb.group({
+    'nombre': ['', Validators.required],
+    'nombreUsuario': ['', [Validators.required, Validators.minLength(4), Validators.maxLength(20)]],
+    'email': ['', [Validators.required, Validators.email]],
+    'password': ['', [Validators.required, Validators.minLength(8)]]
+  }
+  )
+
+  get name(): FormControl{
+    return this.registerForm.get('nombre') as FormControl
+  }
+
+  get nickName(): FormControl{
+    return this.registerForm.get('nombreUsuario') as FormControl
+  }
+
+  get eMail(): FormControl{
+    return this.registerForm.get('email') as FormControl
+  }
+
+  get passWord(): FormControl{
+    return this.registerForm.get('password') as FormControl
+  }
+
+  getUserName(): string {
+    return this.tokenService.getUserName();
   }
 
   onRegister(): void {

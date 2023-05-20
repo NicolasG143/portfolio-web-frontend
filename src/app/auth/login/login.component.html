@@ -16,6 +16,9 @@
                 <input type="password" [formControl]="password" placeholder="Contraseña..." class="form-control" [(ngModel)]="passwordUsuario">
             </div>
             <button [disabled]="loginForm.invalid">Iniciar Sesión</button>
+            <div class="register">
+                <a routerLink="/register">¿No tenes cuenta? Registrate.</a>
+            </div>
         </form>
     </div>
 </ng-template>
