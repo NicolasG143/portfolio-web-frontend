@@ -10,7 +10,8 @@ import { JwtDto } from '../classes/jwt-dto';
 })
 export class AuthService {
 
-  authURL = 'http://localhost:8080/auth/'
+  //authURL = 'http://localhost:8080/auth/'
+  authURL = "https://portfolio-web-pkox.onrender.com/auth/"
 
   constructor(private httpClient: HttpClient) { }
 

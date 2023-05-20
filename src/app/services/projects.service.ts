@@ -8,8 +8,8 @@ import { Projects } from '../classes/projects';
 })
 export class ProjectsService {
 
-  // baseURL = "https://portfolio-web-pkox.onrender.com/projects/"
-  baseURL = "http://localhost:8080/projects/"
+  baseURL = "https://portfolio-web-pkox.onrender.com/projects/"
+  //baseURL = "http://localhost:8080/projects/"
 
   constructor(private httpClient: HttpClient) { }
 

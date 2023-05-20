@@ -33,10 +33,10 @@ constructor (private tokenService: TokenService,
 
   onRegister(): void {
     this.nuevoUsuario = new NuevoUsuario(this.nombre, this.nombreUsuario, this.email, this.password);
-    this.authService.login(this.nuevoUsuario).subscribe(data => {
+    this.authService.nuevo(this.nuevoUsuario).subscribe(data => {
       this.isRegister = true;
       this.isRegisterFail = false;
-      this.router.navigate(["/login"])
+      this.router.navigate(["/register"])
     },
     err => {
       this.isRegisterFail = true;
