@@ -1,0 +1,21 @@
+
+<div class="isLogged" *ngIf="isLogged; else loggedOut">
+    <p>Ya iniciaste sesión como: {{getUserName()}}</p>
+    <a routerLink="">Ir a inicio</a>
+</div>
+
+<ng-template #loggedOut>
+    <div class="loginContainer">
+        <form [formGroup]="loginForm" (ngSubmit)="onLogin()" class="login-form">
+            <div>
+                <label>Nombre de Usuario:</label>
+                <input type="text" [formControl]="nombreUsuario" placeholder="Nombre de Usuario..." class="form-control" [(ngModel)]="nickUsuario">
+            </div>
+            <div>
+                <label>Contraseña:</label>
+                <input type="password" [formControl]="password" placeholder="Contraseña..." class="form-control" [(ngModel)]="passwordUsuario">
+            </div>
+            <button [disabled]="loginForm.invalid">Iniciar Sesión</button>
+        </form>
+    </div>
+</ng-template>

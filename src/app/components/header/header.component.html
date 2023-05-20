@@ -6,5 +6,7 @@
         <li class="nav-bar__link"><a href="#about">Sobre mi</a></li>
         <li class="nav-bar__link"><a href="#projects">Proyectos</a></li>
         <li class="nav-bar__link"><a href="#contact">Contacto</a></li>
+        <li class="nav-bar__link" *ngIf="!isLogged"><a routerLink="/login">Login</a></li>
+        <li class="nav-bar__link" *ngIf="isLogged"(click)="onLogOut()"><a routerLink="/">Logout</a></li>
     </ul>
 </nav>

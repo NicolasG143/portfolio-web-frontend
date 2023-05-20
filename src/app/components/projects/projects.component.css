@@ -7,11 +7,14 @@
 }
 
 .projects-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
   gap: 2rem;
+}
+
+.project {
+  height: 100%;
 }
 
 .project a {
@@ -21,7 +24,7 @@
   gap: 5rem;
   border: 1px solid #fff;
   border-radius: 50px;
-  height: fit-content;
+  height: 100%;
   transition: scale 250ms ease-in;
   color: white;
   text-decoration: none;

@@ -14,6 +14,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
 import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { LoginComponent } from './auth/login/login.component';
+import { RegisterComponent } from './auth/register/register.component';
+import { IndexComponent } from './components/index/index.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
     AboutComponent,
     ProjectsComponent,
     ContactComponent,
-    ContactFormComponent
+    ContactFormComponent,
+    LoginComponent,
+    RegisterComponent,
+    IndexComponent
   ],
   imports: [
     BrowserModule,

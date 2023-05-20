@@ -1,0 +1,24 @@
+.scroll-back {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  margin: 2.5rem;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3.5rem;
+  border-radius: 50%;
+  transition: opacity 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  cursor: pointer;
+}
+
+.hide-back {
+  opacity: 0;
+  pointer-events: none;
+}
